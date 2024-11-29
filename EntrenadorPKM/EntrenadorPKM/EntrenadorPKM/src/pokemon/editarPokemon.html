@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Pokémon</title>
+    <link rel="stylesheet" href="pokemon.css"> 
+    <script src="./pokemonController.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>Editar Pokémon</h1>
+    </header>
+
+    <main>
+        <form id="form-editar-pokemon" action="/ruta-para-actualizar" method="POST">
+            <div class="form-group">
+                <label for="id">ID</label>
+                <input type="number" id="id" name="id" readonly required>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre del Pokémon" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tipo">Tipo</label>
+                <input type="text" id="tipo" name="tipo" placeholder="Tipo del Pokémon (e.g., Fuego, Agua)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nivel">Nivel</label>
+                <input 
+                    type="number" 
+                    id="nivel" 
+                    name="nivel" 
+                    placeholder="Nivel del Pokémon" 
+                    required 
+                    min="2" 
+                    max="100"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="num-pokedex">Número de Pokédex</label>
+                <label for="nivel">Nivel</label>
+                <input 
+                    type="number" 
+                    id="Numero_Pokedex" 
+                    name="Numero_Pokedex" 
+                    placeholder="Numero de Pokedex" 
+                    required 
+                    min="1" 
+                    max="1025"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="entrenador">Entrenador</label>
+                <select id="entrenador" name="entrenador" required>
+                    <option value="">Selecciona un entrenador</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="debilitado">¿Está debilitado?</label>
+                <select id="debilitado" name="debilitado" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="true">Sí</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+
+            <button type="submit">Actualizar Pokémon</button>
+        </form>
+
+        <a href="listaPokemon.html" class="btn-regresar">Regresar a la lista</a>
+    </main>
+
+</body>
+</html>

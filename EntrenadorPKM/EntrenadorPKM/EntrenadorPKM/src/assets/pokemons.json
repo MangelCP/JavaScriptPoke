@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "nombre": "Pikachu",
+      "tipo": "Eléctrico",
+      "Num_Pokedex":25,
+      "nivel": 25,
+      "entrenador": "Ash Ketchum",
+      "debilitado":true
+    },
+    {
+      "id": 2,
+      "nombre": "Dragonite",
+      "tipo": "Dragón/Volador",
+      "Num_Pokedex":149,
+      "nivel": 70,
+      "entrenador": "Ash Ketchum",
+      "debilitado":false
+    }
+  ]
+  

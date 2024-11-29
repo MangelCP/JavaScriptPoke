@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Entrenador</title>
+    <link rel="stylesheet" href="entrenador.css"> 
+</head>
+<body>
+    <header>
+        <h1>Crear Entrenador</h1>
+    </header>
+
+    <main>
+        <form id="form-crear-entrenador">
+            <div class="form-group">
+                <label for="id">ID</label>
+                <input type="number" id="id" name="id" placeholder="Ingresa el ID del entrenador" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre del entrenador" required>
+            </div>
+
+            <div class="form-group">
+                <label for="latitud">Latitud (Región)</label>
+                <input type="number" step="any" id="latitud" name="latitud" placeholder="Latitud de la región" required>
+            </div>
+
+            <div class="form-group">
+                <label for="longitud">Longitud (Región)</label>
+                <input type="number" step="any" id="longitud" name="longitud" placeholder="Longitud de la región" required>
+            </div>
+
+            <div class="form-group">
+                <label for="medallas">Medallas</label>
+                <input type="number" id="medallas" name="medallas" placeholder="Cantidad de medallas" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pkm-capturados">Pokémon Capturados</label>
+                <input type="number" id="pkm-capturados" name="pkm-capturados" placeholder="Cantidad de Pokémon capturados" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rango">Rango</label>
+                <select id="rango" name="rango" required>
+                    <option value="">Selecciona un rango</option>
+                    <option value="Principiante">Entrenador Principiante</option>
+                    <option value="Intermedio">Lider de Gimnasio</option>
+                    <option value="Avanzado">Campeon</option>
+                    <option value="Maestro">Criador Pokemon</option>
+                    <option value="Maestro">Enfermero/Enfermera</option>
+                    <option value="Maestro">Maestro Pokemon</option>
+                    <option value="Maestro">Profesor Pokemon</option>
+                </select>
+            </div>
+
+            <button type="submit">Crear Entrenador</button>
+        </form>
+
+        <a href="listaEntrenador.html" class="btn-regresar">Regresar al listado</a>
+    </main>
+</body>
+</html>

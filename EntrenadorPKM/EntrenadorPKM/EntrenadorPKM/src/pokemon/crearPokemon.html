@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Pokémon</title>
+    <link rel="stylesheet" href="pokemon.css">
+</head>
+<script src="./pokemonController.js" type="module"></script>
+<body>
+    <header>
+        <h1>Crear Nuevo Pokémon</h1>
+    </header>
+
+    <main>
+        <form id="form-crear-pokemon" action="/ruta-para-guardar" method="POST">
+            <div class="form-group">
+                <label for="id">ID</label>
+                <input type="number" id="id" name="id" placeholder="ID único para el Pokémon" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre del Pokémon" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tipo">Tipo</label>
+                <input type="text" id="tipo" name="tipo" placeholder="Tipo del Pokémon (e.g., Fuego, Agua)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nivel">Nivel</label>
+                <input 
+                    type="number" 
+                    id="nivel" 
+                    name="nivel" 
+                    placeholder="Nivel del Pokémon" 
+                    required 
+                    min="1" 
+                    max="100"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="num-pokedex">Número de Pokédex</label>
+                <input 
+                    type="number" 
+                    id="num-pokedex" 
+                    name="num-pokedex" 
+                    placeholder="Numero de pokedex" 
+                    required 
+                    min="1" 
+                    max="100"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="entrenador">Entrenador</label>
+                <select id="entrenador" name="entrenador" required>
+                    <option value="">Selecciona un entrenador</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="debilitado">¿Esta debilitado?</label>
+                <select id="debilitado" name="debilitado" required>
+                    <option value="">Selecciona una opcion</option>
+                    <option value="true">Sí</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+
+            <button type="submit">Crear Pokemon</button>
+        </form>
+
+        <a href="listaPokemon.html" class="btn-regresar">Regresar al listado</a>
+    </main>
+
+</body>
+</html>
+
